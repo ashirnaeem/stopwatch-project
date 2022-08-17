@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fira sans', sans-serif;
+}
+.stopwatch-container{
+    
+ text-align: center;
+ width: 100%;
+ height: 380px;
+ margin: 8rem auto;
+ 
+}
+.count{
+    display: flex;
+}
+.splitShow{
+    
+    color:orange ;
+   
+}
+.flex{
+    display: flex;
+}
+.padTime{
+    padding-left: 50px;
+   
+}
+.timer{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.controls button{
+    margin: 1rem;
+    padding: 1.6rem;
+    border-radius:  50% 50%;
+    outline-style: none;
+    border: 1px solid lightgray;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    
+}
+.split3{
+    display: flex;
+    margin-top: 40px;
+    gap: 5rem;
+    justify-content: center;
+}
+.counter{
+  color: #AAAAAA;
+}
+.splitTime3{
+    color: orange;
+}
+.status{
+    color: #AAAAAA;
+    font-size: 18px;
+}
+
+.Pause{
+    display: none;
+}
+
+.timer > span{
+  width: 90px;
+  height: 90px;
+}
+hr{
+    width: 70%;
+    margin: 20px auto;
+    color:#AAAAAA;
+    border: 1px solid #AAAAAA;
+    display: none;
+}
