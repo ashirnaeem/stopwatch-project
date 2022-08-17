@@ -94,6 +94,10 @@ const split=document.getElementById('split');
 split.style.color='#AAAAAA';
 split.style.backgroundColor='';
 document.getElementById('hr').style.display='none';
+start.style.display='block';
+pause.style.display='none';
+start.style.backgroundColor='#18A69D';
+start.style.color='white';
 
 }
 //stopwatch function
