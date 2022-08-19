@@ -16,26 +16,30 @@ let timer = false;
 function start() {
   timer = true;
   //pause prop
-  const pause = document.getElementById("pause");
-  pause.style.display = "block";
-  pause.style.color = "white";
-  pause.style.backgroundColor = "#FB657F";
+    PauseProperties();
+  // const pause = document.getElementById("pause");
+  // pause.style.display = "block";
+  // pause.style.color = "white";
+  // pause.style.backgroundColor = "#FB657F";
   //start prop
-  const start = document.getElementById("start");
-  start.style.display = "none";
-  start.style.backgroundColor = "#18A69D";
+  StartDisplayNone();
+  // const start = document.getElementById("start");
+  // start.style.display = "none";
+  // start.style.backgroundColor = "#18A69D";
   // reset prop
-  const reset = document.getElementById("reset");
-  reset.style.cursor = "pointer";
-  reset.style.cursor = "not-allowed";
-  reset.style.backgroundColor = "";
-  reset.style.color = "#AAAAAA";
+  ResetDisableProperties();
+  // const reset = document.getElementById("reset");
+  // reset.style.cursor = "pointer";
+  // reset.style.cursor = "not-allowed";
+  // reset.style.backgroundColor = "";
+  // reset.style.color = "#AAAAAA";
 
-  //split table display prop
-  const split = document.getElementById("split");
-  split.style.backgroundColor = "#F29E26";
-  split.style.color = "white";
-  split.style.cursor = "pointer";
+  //split prop
+  SplitProperties();
+  // const split = document.getElementById("split");
+  // split.style.backgroundColor = "#F29E26";
+  // split.style.color = "white";
+  // split.style.cursor = "pointer";
   stopwatch();
   //split timer prop
   splitSHOW();
@@ -44,23 +48,29 @@ function start() {
 //  pause function
 function pause() {
   timer = false;
-  const pause = document.getElementById("pause");
-  pause.style.display = "none";
-  const start = document.getElementById("start");
-  start.style.display = "block";
-  start.style.color = "white";
-  pause.style.backgroundColor = "#FB657F";
-  pause.style.color = "white";
+
+
+  PauseDisable();
+  // const pause = document.getElementById("pause");
+  // pause.style.display = "none";
+  // pause.style.backgroundColor = "#FB657F";
+  // pause.style.color = "white";
+  // const start = document.getElementById("start");
+  // start.style.display = "block";
+  // start.style.color = "white";
+  StartDisplayBlock();
   
   if (timer === false) {
-    const reset = document.getElementById("reset");
-    reset.style.backgroundColor = "#4487D0";
-    reset.style.cursor = "pointer";
-    reset.style.color = "white";
-    const split = document.getElementById("split");
-    split.style.color = "#AAAAAA";
-    split.style.backgroundColor = "";
-    split.style.cursor = "no-drop";
+    ResetDisplayProperties();
+    // const reset = document.getElementById("reset");
+    // reset.style.backgroundColor = "#4487D0";
+    // reset.style.cursor = "pointer";
+    // reset.style.color = "white";
+    SplitBlockProperties( );
+    // const split = document.getElementById("split");
+    // split.style.color = "#AAAAAA";
+    // split.style.backgroundColor = "";
+    // split.style.cursor = "no-drop";
 
   }
 }
@@ -263,4 +273,53 @@ function splitSHOW() {
   document.getElementById("s-seconds").innerHTML = up_sSec;
   document.getElementById("s-msec").innerHTML = up_sMsec;
   setTimeout(splitSHOW, 2);
+}
+
+function PauseProperties(){
+      const pause = document.getElementById("pause");
+  pause.style.display = "block";
+  pause.style.color = "white";
+  pause.style.backgroundColor = "#FB657F"; 
+}
+function StartDisplayNone(){
+  const start = document.getElementById("start");
+  start.style.display = "none";
+  start.style.backgroundColor = "#18A69D";
+}
+function ResetDisableProperties(){
+  const reset = document.getElementById("reset");
+  reset.style.cursor = "pointer";
+  reset.style.cursor = "not-allowed";
+  reset.style.backgroundColor = "";
+  reset.style.color = "#AAAAAA";
+}
+function SplitProperties(){
+  const split = document.getElementById("split");
+  split.style.backgroundColor = "#F29E26";
+  split.style.color = "white";
+  split.style.cursor = "pointer";
+}
+function PauseDisable(){
+  const pause = document.getElementById("pause");
+  pause.style.display = "none";
+  pause.style.backgroundColor = "#FB657F";
+  pause.style.color = "white";
+}
+function StartDisplayBlock(){
+  const start = document.getElementById("start");
+  start.style.display = "block";
+  start.style.color = "white";
+}
+function ResetDisplayProperties(){
+  const reset = document.getElementById("reset");
+    reset.style.backgroundColor = "#4487D0";
+    reset.style.cursor = "pointer";
+    reset.style.color = "white";
+}
+function SplitBlockProperties(){
+  const split = document.getElementById("split");
+    split.style.color = "#AAAAAA";
+    split.style.backgroundColor = "";
+    split.style.cursor = "no-drop";
+
 }
